@@ -1,0 +1,99 @@
+{
+    /**
+    * generanl config
+    */
+
+    // common
+    "files.autoSave": "afterDelay",
+    "files.autoSaveWhenNoErrors": true,
+    "editor.fontSize": 16,
+    "editor.mouseWheelZoom": true,
+    "files.exclude": {
+        "**/.git": true,
+        "**/*.exe": true,
+        "**/node_modules": true,
+        "**/package-lock.json":true,
+        "**/.idea":true,
+    },
+
+    // 同步时选择性忽略，使用-时，会把原本默认不同步的强制同步
+    "settingsSync.ignoredSettings": [
+        "remote.SSH.remotePlatform",
+        "-C_Cpp.clang_format_path",
+        "-markdown-preview-enhanced.pandocPath"
+    ],
+
+    // features
+    "terminal.integrated.inheritEnv": false,
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmPasteNative": false,
+    "editor.minimap.enabled": false,
+
+
+    // extensions
+    "extensions.autoUpdate": false,
+
+    // security
+    "security.workspace.trust.untrustedFiles": "open",
+    "explorer.confirmDelete": false,
+
+    // vscode theme
+    "vsicons.dontShowNewVersionMessage": true,
+    "workbench.startupEditor": "readme",
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+
+    /**
+    * language config
+    */
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[markdown]": {
+        "editor.quickSuggestions": {
+            "comments": "on",
+            "strings": "on",
+            "other": "on"
+        }
+    },
+
+    /**
+    * extensions config
+    */
+
+    //clang-format
+    "C_Cpp.clang_format_fallbackStyle": "Google",
+    "C_Cpp.autocompleteAddParentheses": true,
+    "C_Cpp.clang_format_path": "${env:_GENERAL_CONFIG_PATH}/VsCode/.vscode/clang-format",
+    "C_Cpp.clang_format_style": "file:${env:_GENERAL_CONFIG_PATH}/VsCode/.vscode/.clang-format",
+
+
+    // markdown
+    "markdown.preview.openMarkdownLinks": "inEditor",
+    "markdown-preview-enhanced.pandocPath": "${env:PANDOC_PATH}",
+    "markdown-preview-enhanced.usePandocParser": true,
+    "markdown-preview-enhanced.pandocMarkdownFlavor": "markdown-raw_tex+tex_math_single_backslash+raw_html-markdown_in_html_blocks",
+
+    //git
+    "git.confirmSync": false,
+    "git.openRepositoryInParentFolders": "never",
+    "git.autofetch": true,
+
+    //remote-ssh
+    "remote.SSH.remotePlatform": {
+        "192.168.63.128": "linux",
+        "WQhuanm": "linux",
+        "ubuntut18": "linux",
+        "Ubuntu24": "linux"
+    },
+    "redhat.telemetry.enabled": false,
+}
